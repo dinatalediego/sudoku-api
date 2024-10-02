@@ -63,5 +63,9 @@ def resolver():
     else:
         return jsonify({'error': 'No se pudo resolver el tablero.'}), 400
 
+@app.route('/')
+def index():
+    return "Bienvenido a la API de Sudoku"
+
 if __name__ == '__main__':
     app.run()
